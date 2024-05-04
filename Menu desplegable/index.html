@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Desplegable</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para el nuevo menú de servicios */
+        .services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .services-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 0; /* Alinea a la izquierda del botón */
+            top: 100%; /* Aparece debajo del botón */
+        }
+
+        .services-dropdown:hover .services-dropdown-content {
+            display: block;
+        }
+
+        .services-dropdown-content a {
+            color: black; /* Cambié el color de la letra a negro */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .services-dropdown-content a:hover {
+            background-color: #77e8fc;
+        }
+    </style>
+</head>
+<body bgcolor="Pink">
+    <div class="dropdown">
+        <button class="dropbtn">
+            <img src="1.png" alt="Imagen Original" width="50" height="50"> <!-- Cambié el tamaño del icono -->
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Inicio</a>
+            <div class="services-dropdown">
+                <button class="dropbtn" style="color:black;">Servicios</button> <!-- Cambié el color del texto a negro -->
+                <div class="services-dropdown-content">
+                    <a href="#">Copias e impresiones</a>
+                    <a href="#">Engargolados</a>
+                    <a href="#">Articulos Escolares</a>
+                    <a href="#">Material de oficina</a>
+                    <a href="#">Arreglos para fiesta</a>
+                </div>
+            </div>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>   
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
